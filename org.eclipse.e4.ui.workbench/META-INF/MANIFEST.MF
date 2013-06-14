@@ -1,0 +1,582 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Service-Component: OSGI-INF/progress.xml, OSGI-INF/partService.xml
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-SymbolicName: org.eclipse.e4.ui.workbench;singleton:=true
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/platfo
+ rm/eclipse.platform.ui.git;path="bundles/org.eclipse.e4.ui.workbench"
+ ;tag=v20130125-100758
+Bundle-Activator: org.eclipse.e4.ui.internal.workbench.Activator
+Require-Bundle: org.eclipse.e4.ui.model.workbench;bundle-version="0.9.
+ 0";visibility:=reexport,org.eclipse.equinox.common;bundle-version="[3
+ .4.0,4.0.0)",org.eclipse.osgi;bundle-version="[3.4.0,4.0.0)",org.ecli
+ pse.e4.ui.services;bundle-version="0.9.0",org.eclipse.equinox.registr
+ y;bundle-version="[3.4.0,4.0.0)",org.eclipse.e4.core.services;bundle-
+ version="0.9.0",org.eclipse.e4.core.contexts;bundle-version="1.0.0",o
+ rg.eclipse.e4.core.di;bundle-version="1.1.0",org.eclipse.core.jobs;bu
+ ndle-version="[3.4.0,4.0.0)",org.eclipse.core.commands;bundle-version
+ ="[3.5.0,4.0.0)",org.eclipse.osgi.services;bundle-version="[3.2.0,4.0
+ .0)",org.eclipse.e4.core.commands;bundle-version="0.9.0",org.eclipse.
+ emf.ecore.change;bundle-version="2.5.0",org.eclipse.core.expressions;
+ bundle-version="[3.4.200,4.0.0)",org.eclipse.e4.ui.di;bundle-version=
+ "0.9.0"
+Export-Package: org.eclipse.e4.ui.internal.workbench; x-friends:="org.
+ eclipse.e4.ui.workbench.fragment,  org.eclipse.e4.ui.workbench.render
+ ers.swt,  org.eclipse.e4.ui.workbench.swt,  org.eclipse.ui.workbench"
+ ,org.eclipse.e4.ui.internal.workbench.addons;x-internal:=true,org.ecl
+ ipse.e4.ui.internal.workbench.handlers;x-internal:=true,org.eclipse.e
+ 4.ui.workbench; x-friends:="org.eclipse.e4.ui.workbench.swt,  org.ecl
+ ipse.e4.ui.workbench.addons.swt,  org.eclipse.e4.ui.workbench.rendere
+ rs.swt,  org.eclipse.ui.workbench",org.eclipse.e4.ui.workbench.lifecy
+ cle;x-friends:="org.eclipse.e4.ui.workbench.swt",org.eclipse.e4.ui.wo
+ rkbench.modeling; x-friends:="org.eclipse.e4.ui.workbench.swt,  org.e
+ clipse.e4.ui.workbench.addons.swt,  org.eclipse.e4.ui.workbench.rende
+ rers.swt,  org.eclipse.ui.workbench"
+Bundle-Version: 0.11.0.v20130125-100758
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Import-Package: com.ibm.icu.text;version="3.8.1",javax.annotation;vers
+ ion="1.0.0",javax.inject;version="1.0.0"
+Bundle-ManifestVersion: 2
+
+Name: org/eclipse/e4/ui/internal/workbench/Util.class
+SHA1-Digest: 4gCcIumluoSSfJPcJYAjSjke4/w=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Category.class
+SHA1-Digest: smMHQ/WAesN+6r+i+bUB34/g12Y=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$EventTypes.class
+SHA1-Digest: 5hRle2RvzT0F3d01NXP+4ao+vyM=
+
+Name: org/eclipse/e4/ui/internal/workbench/ModelAssembler$1.class
+SHA1-Digest: I9n7VoH/9CNm7LrqV/B1HJG5OLc=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$PartDescriptor.class
+SHA1-Digest: t2mFP2yzL78qRfQThmQz9PFpxL8=
+
+Name: org/eclipse/e4/ui/internal/workbench/WorkbenchLogger.class
+SHA1-Digest: Lo93cIdkPbIBbH+xXQDUUKbDfug=
+
+Name: org/eclipse/e4/ui/internal/workbench/SelectionServiceImpl.class
+SHA1-Digest: SEv4TphWiapEdgBofFep1uxKMqg=
+
+Name: org/eclipse/e4/ui/internal/workbench/ModelServiceImpl.class
+SHA1-Digest: BBeea8GHdrug+zU2RehfSLdkuxI=
+
+Name: org/eclipse/e4/ui/workbench/modeling/IModelReconcilingService.cl
+ ass
+SHA1-Digest: jzLGIUJ8H5tr+sP+vfwH2s+jafA=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$ToolItem.class
+SHA1-Digest: kJWrJP+F8JNxY/Z7YFlix3yhgA4=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$PartDescriptorContainer.cla
+ ss
+SHA1-Digest: IfyX12fOfW8TD7xW8d/zFxQd42o=
+
+Name: org/eclipse/e4/ui/internal/workbench/ApplicationPartServiceImpl.
+ class
+SHA1-Digest: b5PB2e9nJhKR9/ntuXxt7MS9lAQ=
+
+Name: org/eclipse/e4/ui/workbench/IExceptionHandler.class
+SHA1-Digest: yYkAyuyZ3zDmS9vpr88IrdwJO2g=
+
+Name: org/eclipse/e4/ui/workbench/modeling/IDelta.class
+SHA1-Digest: jGK2ld2UlDTFC8Nwr3uVBhr3uHk=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Contribution.class
+SHA1-Digest: 6Y/Kx22oRz8QfNd0U4oVh9yKr3Q=
+
+Name: org/eclipse/e4/ui/internal/workbench/UIEventPublisher.class
+SHA1-Digest: NppP0lLiBcUsFs6Ak6e4+nzEkaQ=
+
+Name: org/eclipse/e4/ui/internal/workbench/PartServiceImpl.class
+SHA1-Digest: gYA2WF0OZD5QVtUQet1A4RtCMUw=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$CoreExpression.class
+SHA1-Digest: ncjHXrQgsozyv3QAMMOrSmhECv0=
+
+Name: org/eclipse/e4/ui/internal/workbench/SelectionAggregator$4.class
+SHA1-Digest: /QNe8r7yjIOYQ1j1R46mJXpE13c=
+
+Name: org/eclipse/e4/ui/internal/workbench/EMFDeltaMapSet.class
+SHA1-Digest: 2ptTLQkARiHAtdAfcAREK0h/zmk=
+
+Name: org/eclipse/e4/ui/internal/workbench/SelectionAggregator$8.class
+SHA1-Digest: rSjRTnc5bZjOj4YEQ5FPK7X84Ok=
+
+Name: org/eclipse/e4/ui/workbench/modeling/ESelectionService.class
+SHA1-Digest: oK/Ju6JK5s/5j2c3UHpRYalVCTE=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$HandledItem.class
+SHA1-Digest: d4VdPQsUixHDoDl0Xhn5IyrfV3o=
+
+Name: org/eclipse/e4/ui/internal/workbench/XMLModelReconciler$1.class
+SHA1-Digest: cTYLi+a1nK658Pjb/IOpa9/EWco=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Menu.class
+SHA1-Digest: 9LJeTPjTMS4jMRb89xSu7vVq5Bo=
+
+Name: org/eclipse/e4/ui/workbench/modeling/EModelService.class
+SHA1-Digest: 3w+faDcnJvfCRW2kj6MfCVrMi7w=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Placeholder.class
+SHA1-Digest: AIOtFtwSAclYckMTd2XTlVvziO0=
+
+Name: org/eclipse/e4/ui/internal/workbench/E4Workbench.class
+SHA1-Digest: ue0XKxlIzcV9UlRsrnIj4i4+gCo=
+
+Name: org/eclipse/e4/ui/internal/workbench/PartServiceImpl$4.class
+SHA1-Digest: THTHny2hoRM2VHiseDaXOdhd2SE=
+
+Name: org/eclipse/e4/ui/internal/workbench/ActivePartLookupFunction.cl
+ ass
+SHA1-Digest: lcBg5eo+dTn6AEAYZk9ui9HTXVw=
+
+Name: org/eclipse/e4/ui/internal/workbench/E4XMIResource.class
+SHA1-Digest: 304ocWp6hLge3nRtelZtKppEd5A=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$RenderedMenuItem.class
+SHA1-Digest: xav75zzqwWXw73AszbOmkOZ45Tc=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Perspective.class
+SHA1-Digest: TP/hBpe3SP/l/P3CrgYgrnqZmw4=
+
+Name: org/eclipse/e4/ui/internal/workbench/XMLModelReconciler$Position
+ .class
+SHA1-Digest: NsU+gLrhIoJCVBY8rRmX9KxvSw8=
+
+Name: org/eclipse/e4/ui/workbench/modeling/ISaveHandler$Save.class
+SHA1-Digest: bleqtDXhp0ZtjdTHQa/NXEwsQz8=
+
+Name: org/eclipse/e4/ui/internal/workbench/CompositeDelta.class
+SHA1-Digest: P5R1sWwit26NjkdBMR3nLzH1zdE=
+
+Name: org/eclipse/e4/ui/internal/workbench/Policy.class
+SHA1-Digest: wxLUIo7tKEG9/2hJ5g8yRb0lN7M=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$KeySequence.class
+SHA1-Digest: E0KwCLJtYIGeozwSHyulkDHesAI=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents.class
+SHA1-Digest: 6zZE0kvlOJ3oOxraXh/rmP6wkAk=
+
+Name: org/eclipse/e4/ui/workbench/modeling/ISelectionListener.class
+SHA1-Digest: 5jOp92U5eQc94tkLe9gPwVn/6E4=
+
+Name: org/eclipse/e4/ui/workbench/modeling/EPartService$PartState.clas
+ s
+SHA1-Digest: 3OPr6OTvZACyzhRJQGIoJyqK8G4=
+
+Name: org/eclipse/e4/ui/internal/workbench/ExceptionHandler.class
+SHA1-Digest: NQsArQ0MV4A2cbfk3e5BnRZbBfQ=
+
+Name: org/eclipse/e4/ui/internal/workbench/EMFModelDeltaUnset.class
+SHA1-Digest: 3jRP2o1C7LhokCgXznV5PmPmOio=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Handler.class
+SHA1-Digest: Fw8sUOahET6EM43UqOgN0ej83WM=
+
+Name: org/eclipse/e4/ui/internal/workbench/ContributionsAnalyzer$MenuK
+ ey.class
+SHA1-Digest: ISTxmDHV1umriRdklxZ+4UCbZqQ=
+
+Name: org/eclipse/e4/ui/internal/workbench/handlers/UnimplementedHandl
+ er.class
+SHA1-Digest: un1V+sbcxp6SKiXQPpLNmH34ivg=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Application.class
+SHA1-Digest: 1ZMy/t9sPkk6aQ7Df73NsoGBa9w=
+
+Name: org/eclipse/e4/ui/internal/workbench/ModelAssembler$2.class
+SHA1-Digest: zwvCyz0iUby8iDy6sc3GU5Fd8Ts=
+
+Name: org/eclipse/e4/ui/internal/workbench/EMFModelDeltaDelayedSet.cla
+ ss
+SHA1-Digest: yQ6suiaPtiuJfiBl0CQ4JOthfO0=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$EventTags.class
+SHA1-Digest: YtqpImvTynEhHM+Pt7zKfY9mvz0=
+
+Name: org/eclipse/e4/ui/internal/workbench/EMFDeltaEntrySet.class
+SHA1-Digest: Bp15VLzqFyZGAle8/x5xcykayhI=
+
+Name: org/eclipse/e4/ui/workbench/modeling/ExpressionContext.class
+SHA1-Digest: y2K0AgXxRejIR+QBLYHiOeMhnh8=
+
+Name: org/eclipse/e4/ui/workbench/modeling/ModelDelta.class
+SHA1-Digest: MJ+RllcgUF6hUeP09BF+Gnmwrr0=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$UILabel.class
+SHA1-Digest: zTrh/kSy8HYHAMSjQz1yur8n8ok=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$TrimContributions.class
+SHA1-Digest: /54wqXYSljs6B+BeV8Lf7QEl+24=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$MenuContribution.class
+SHA1-Digest: N1MDi3OnXVRZpqtfPzygZu7DcXI=
+
+Name: org/eclipse/e4/ui/workbench/modeling/ModelHandlerBase.class
+SHA1-Digest: RYNZ7jIXRXBFZ2UvJJZmYzWtlE4=
+
+Name: org/eclipse/e4/ui/internal/workbench/addons/CommandProcessingAdd
+ on.class
+SHA1-Digest: nYSAURt4sPOpEirID9F6q2g8mfU=
+
+Name: org/eclipse/e4/ui/workbench/lifecycle/ProcessAdditions.class
+SHA1-Digest: hB6ontMP9fapb7IhbfStXlr4GLA=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$TrimContribution.class
+SHA1-Digest: X9HjclTlZmr0iNf9/KcDBtxJafQ=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$GenericTile.class
+SHA1-Digest: xNoPDpMO655Mmy2yyTan7J68wtk=
+
+Name: org/eclipse/e4/ui/internal/workbench/SelectionAggregator$1.class
+SHA1-Digest: vGkVLYmYSfZUyYoyP+4OASosBD8=
+
+Name: org/eclipse/e4/ui/internal/workbench/ContributionsAnalyzer$Key.c
+ lass
+SHA1-Digest: cV5V8eM6AblggJfxPFO2/1OJfJQ=
+
+Name: org/eclipse/e4/ui/internal/workbench/SelectionAggregator$5.class
+SHA1-Digest: pfqvOba3C1uhV8/MB7FnhG2TlKI=
+
+Name: org/eclipse/e4/ui/workbench/modeling/EPartService.class
+SHA1-Digest: qWpIqaY9iRBM4xhUarveKwSaZeI=
+
+Name: org/eclipse/e4/ui/internal/workbench/UIEventPublisher$1.class
+SHA1-Digest: F85xPIgUtwa5f/+FM+HwyIeznVQ=
+
+Name: org/eclipse/e4/ui/workbench/modeling/IPartListener.class
+SHA1-Digest: A3X02/zMQvXdFzm37WfQ/otlphk=
+
+Name: org/eclipse/e4/ui/internal/workbench/ExitHandler.class
+SHA1-Digest: yu0P99dAzYj066Mv+b82x/eGpYU=
+
+Name: org/eclipse/e4/ui/internal/workbench/handlers/ExitHandler.class
+SHA1-Digest: Fh3S+CULMsG6JGU0BLgqnVT+2iI=
+
+Name: org/eclipse/e4/ui/internal/workbench/PartServiceImpl$1.class
+SHA1-Digest: Cyp38QvH7lLGwS4CgTmhviXjilA=
+
+Name: org/eclipse/e4/ui/internal/workbench/handlers/SaveHandler.class
+SHA1-Digest: QgJDHaLrVFgpGzZNaitwHGl12/k=
+
+Name: org/eclipse/e4/ui/workbench/modeling/ISaveHandler.class
+SHA1-Digest: YvnCLQk5HQnzF/e6e/PNsQfjtGA=
+
+Name: org/eclipse/e4/ui/workbench/lifecycle/PreSave.class
+SHA1-Digest: 5f1I+YH9/EtpPMWiOOICv+lTr1g=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$SnippetContainer.class
+SHA1-Digest: g/Ms05sfkY44WR1/K0xhy/29RtI=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$BindingTableContainer.class
+SHA1-Digest: ucCe84s/eDD39lcfQ6Mw+1j4rXA=
+
+Name: org/eclipse/e4/ui/internal/workbench/PartServiceImpl$5.class
+SHA1-Digest: 84AosEUTv1VPvn2uNLp7AaW8vUY=
+
+Name: org/eclipse/e4/ui/internal/workbench/Activator.class
+SHA1-Digest: 9i2jWmjt7WQgc9MhRaid8mxSybo=
+
+Name: about.html
+SHA1-Digest: +KDQabAA/C3O/NP2n7v/WkoTZVo=
+
+Name: org/eclipse/e4/ui/internal/workbench/addons/ContextProcessingAdd
+ on.class
+SHA1-Digest: 0RgpJ6VWR8m88hM6Q7NAmt6DEis=
+
+Name: org/eclipse/e4/ui/internal/workbench/IDelegateInitializer.class
+SHA1-Digest: rJVlaZzfG59TgykuS68Rf/MGXLQ=
+
+Name: org/eclipse/e4/ui/internal/workbench/ResourceHandler.class
+SHA1-Digest: GXTNE8YtYUDiLW9o/0JUm4ejt5E=
+
+Name: org/eclipse/e4/ui/internal/workbench/EMFModelDeltaSet.class
+SHA1-Digest: Zx7b5mMmg86LiUQyiR+YQATJtW0=
+
+Name: org/eclipse/e4/ui/internal/workbench/E4XMIResourceFactory.class
+SHA1-Digest: 5jhnFjKOuYEeclhYylHvWwPwFoA=
+
+Name: org/eclipse/e4/ui/workbench/modeling/EPlaceholderResolver.class
+SHA1-Digest: 4Zjkr/FHpkiI8wY26AqR87U89ig=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Input.class
+SHA1-Digest: unxnBRMomH4eLG9qpHOAIzRobNU=
+
+Name: org/eclipse/e4/ui/internal/workbench/Trackable.class
+SHA1-Digest: C7G5nZEY2deHYwanFtLhqOrjotw=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Command.class
+SHA1-Digest: PkLHnoF2c+tjfMIwc6YYr1r41hA=
+
+Name: org/eclipse/e4/ui/internal/workbench/ContributionsAnalyzer.class
+SHA1-Digest: xNr4FX9Oa3rxqbtMd39Fd8IQ8tc=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$StringToObjectMap.class
+SHA1-Digest: zCbtbtKAtwODQtpMIg1J28Vy628=
+
+Name: org/eclipse/e4/ui/internal/workbench/handlers/SaveAllHandler.cla
+ ss
+SHA1-Digest: 2MI4PMvUTYA+g8bk2SgxeINePCo=
+
+Name: org/eclipse/e4/ui/internal/workbench/ReflectionContributionFacto
+ ry.class
+SHA1-Digest: k8KHQJQXEIOibYNZIMbuxKfK/mk=
+
+Name: org/eclipse/e4/ui/workbench/IModelResourceHandler.class
+SHA1-Digest: wsCkDT65DMD5ooM+LHmFQr3S8zo=
+
+Name: org/eclipse/e4/ui/internal/workbench/ModelReconcilingService.cla
+ ss
+SHA1-Digest: ck2A3KUHYxvEEfsnosLmvTLgJRU=
+
+Name: OSGI-INF/progress.xml
+SHA1-Digest: K5RlNmtd0viqCaQ50d70DE1ECzg=
+
+Name: org/eclipse/e4/ui/internal/workbench/Parameter$1.class
+SHA1-Digest: CUfv1qmV5Y57ftXfEZa2bWp/yfk=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$BindingTable.class
+SHA1-Digest: R5viW0m9e6faIF+UqUHqRp17L30=
+
+Name: org/eclipse/e4/ui/internal/workbench/PartServiceCreationFunction
+ .class
+SHA1-Digest: qpKqqEtumm3GG/7Q1mHTsqP+CCQ=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Bindings.class
+SHA1-Digest: xf3OA5KsvR3ucOl6MmX3Q/l21Jw=
+
+Name: org/eclipse/e4/ui/workbench/IPresentationEngine.class
+SHA1-Digest: Is+2f464NwFDMhVGe3PeFHbsVYE=
+
+Name: org/eclipse/e4/ui/workbench/modeling/EObjModelHandler.class
+SHA1-Digest: BB3yzfFwvPAgNwhUIplJ/bmjdQM=
+
+Name: org/eclipse/e4/ui/internal/workbench/ModelReconcilingService$1.c
+ lass
+SHA1-Digest: eLifImKLOKsWAle0flZEfT+/dgc=
+
+Name: OSGI-INF/partService.xml
+SHA1-Digest: pGsRpj+3w1QZgBtb9y+xcyaMbBE=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$UIElement.class
+SHA1-Digest: acPr/g+ln+OQOtP2NmE6PJWJUFs=
+
+Name: org/eclipse/e4/ui/internal/workbench/SelectionAggregator$2.class
+SHA1-Digest: eej0gJGwdTreVJx1l81VIvEfq8s=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Parameter.class
+SHA1-Digest: IscYUiqvYrKh35i4pyCZ7q4i2kQ=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$HandlerContainer.class
+SHA1-Digest: 5a8V2HEHQM3VOO81lJ+ivDgdUb8=
+
+Name: org/eclipse/e4/ui/internal/workbench/SelectionAggregator$6.class
+SHA1-Digest: fwJul6pqwfTV6uA8+rUMRKEPcVU=
+
+Name: org/eclipse/e4/ui/workbench/IWorkbench.class
+SHA1-Digest: CfhbjEjpkyg/ANYaKaa9peMehhU=
+
+Name: org/eclipse/e4/ui/internal/workbench/ConfigurationElementAdapter
+ .class
+SHA1-Digest: Y4Pmhj02StzAYzl2KkOPe9ZDkLU=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$CommandParameter.class
+SHA1-Digest: +n24q4DzEOOxsrS+jL6v7A3JLMA=
+
+Name: org/eclipse/e4/ui/internal/workbench/addons/CommandProcessingAdd
+ on$1.class
+SHA1-Digest: dZoUMeRsD6G7LMwCcz21d+1t+IM=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: KyT9FF7C7t86NoBoa2kZT3ZJBfw=
+
+Name: org/eclipse/e4/ui/internal/workbench/PartServiceImpl$2.class
+SHA1-Digest: 71WD09NNesDXUnC9NNQnsz1bb50=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$UILifeCycle.class
+SHA1-Digest: OT0pfoHJD+RHKqcDHWMVV7O8i3s=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$ElementContainer.class
+SHA1-Digest: bihI92/KaW1Cm2KWlqEah6xdEIo=
+
+Name: org/eclipse/e4/ui/internal/workbench/PartServiceImpl$6.class
+SHA1-Digest: pQhiQk9h+NUdJ+xBdKFaYPJ6VEk=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$TrimmedWindow.class
+SHA1-Digest: NxVlv9zb+9A1ARk+Uh8QYNuI7HE=
+
+Name: org/eclipse/e4/ui/internal/workbench/SelectionAggregator$7$1.cla
+ ss
+SHA1-Digest: MsJ35G+qYLVXa6DkLy6fnrSDxz8=
+
+Name: org/eclipse/e4/ui/internal/workbench/SelectionAggregator$8$1.cla
+ ss
+SHA1-Digest: 2T/7UEADxhcqxMlVgfEmtA1cZAY=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$BindingContext.class
+SHA1-Digest: /aX2icVkFxmZtabAmlnroH0YQTc=
+
+Name: .options
+SHA1-Digest: JUuqvJMQsFC73gVS5oZQfsN0/EU=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Window.class
+SHA1-Digest: 9t2UqqgETOExZA5I9AAjnb98qfE=
+
+Name: org/eclipse/e4/ui/internal/workbench/ExtensionPointProxy.class
+SHA1-Digest: KH5/LG3VNn7r1InbkDy8/eV+zpU=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Part.class
+SHA1-Digest: 28N6i0qq/SwQ/sNQRGG8A1D+DjI=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$RenderedMenu.class
+SHA1-Digest: tRAOE53NndV6h+DE/Z5sD9upZvU=
+
+Name: org/eclipse/e4/ui/internal/workbench/ProgressMonitorFunction.cla
+ ss
+SHA1-Digest: L1wm6PsEnKh2qwtv6dnhaNuZTZA=
+
+Name: org/eclipse/e4/ui/workbench/IResourceUtilities.class
+SHA1-Digest: diglPX0hL9mycsbGrECtdpGI+k0=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$ToolBarContribution.class
+SHA1-Digest: f7JrPxCwllKF4ufbCRIy0WuOPxY=
+
+Name: org/eclipse/e4/ui/workbench/lifecycle/ProcessRemovals.class
+SHA1-Digest: grExOWiwMUZ7ApBdcW1uSeCTAWc=
+
+Name: org/eclipse/e4/ui/internal/workbench/ContributionsAnalyzer$ToolB
+ arKey.class
+SHA1-Digest: Esk8ph441dxmF0vZQGxgNOj5K/E=
+
+Name: org/eclipse/e4/ui/internal/workbench/addons/ContextProcessingAdd
+ on$1.class
+SHA1-Digest: /KjuoGr7LqMFVVEEMLgp5FQGmWM=
+
+Name: org/eclipse/e4/ui/workbench/modeling/ModelReconciler.class
+SHA1-Digest: wN+2I0e4dMO4u69nrspmHa3Vrlc=
+
+Name: org/eclipse/e4/ui/internal/workbench/PartActivationHistory.class
+SHA1-Digest: QI2l0hrXgU3l8kIf4k2fVnC3vOw=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$ToolBarContributions.class
+SHA1-Digest: kUq/ao2kpPDUhMQ6LK1pCUGYqNs=
+
+Name: org/eclipse/e4/ui/internal/workbench/SelectionAggregator.class
+SHA1-Digest: H5MR9ihIDq9LaMKsLfB+2HjxeCU=
+
+Name: org/eclipse/e4/ui/workbench/modeling/ModelService.class
+SHA1-Digest: kFqJ+DnzRXuK0hBuL8E0OyuAlS4=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$MenuElement.class
+SHA1-Digest: glUA4QuOei8qABUfukU4uaZKFQM=
+
+Name: plugin.properties
+SHA1-Digest: xs4FBHqh22XxJSYP9X9s2vA18s8=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$OpaqueToolItem.class
+SHA1-Digest: H8uPXuxq7o8RcfCh6K8XGZcRhX4=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$ApplicationElement.class
+SHA1-Digest: emhczzudh5oXPM+YFkZ0aeRKUXI=
+
+Name: org/eclipse/e4/ui/internal/workbench/URIHelper.class
+SHA1-Digest: krxVY+zfH/BfpyYEfNvdLc2X804=
+
+Name: org/eclipse/e4/ui/internal/workbench/EMFModelDeltaThreeWayDelaye
+ dSet.class
+SHA1-Digest: joxO/PcZdmggppdg5i2Px2/wo3E=
+
+Name: org/eclipse/e4/ui/internal/workbench/XMLModelReconciler.class
+SHA1-Digest: 99ng/MK19PZQMGCLVWeK3HWtJTQ=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$OpaqueMenuSeparator.class
+SHA1-Digest: v1F4sNbqc6OF53/pATX0bv0GD9s=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$OpaqueMenuItem.class
+SHA1-Digest: e5Nu9aT5HtppjzPth8xUwL7/iV0=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Item.class
+SHA1-Digest: k9Ge17J0xfkzQ7dyAqBQtWjbOjs=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$RenderedToolBar.class
+SHA1-Digest: uqxvk7r+TVw35Ebt+FSHDF/KbdM=
+
+Name: org/eclipse/e4/ui/internal/workbench/ModelServiceImpl$1.class
+SHA1-Digest: FkryoYHFCyNX20BfernrEgfNzhk=
+
+Name: org/eclipse/e4/ui/internal/workbench/ModelReconcilingService$2.c
+ lass
+SHA1-Digest: CBXEoOqf10K6YOBBhVkP5nO9/gs=
+
+Name: org/eclipse/e4/ui/internal/workbench/ContributionsAnalyzer$TrimK
+ ey.class
+SHA1-Digest: Tz2zx5ynUlf54dAxUsiXrFyoxWQ=
+
+Name: org/eclipse/e4/ui/internal/workbench/DefaultLoggerProvider.class
+SHA1-Digest: T/Ynnxb52tbrsEL2U9bFbpCBFT4=
+
+Name: org/eclipse/e4/ui/internal/workbench/SelectionAggregator$3.class
+SHA1-Digest: cfUQIs2yWkb06m94UikeeyaSEg0=
+
+Name: plugin.xml
+SHA1-Digest: MJTMUBeScYFdjwPTnwBWiz8CE4M=
+
+Name: org/eclipse/e4/ui/workbench/modeling/IWindowCloseHandler.class
+SHA1-Digest: HdxjmG2VK7XdeH4t+7dSfLi877k=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Dirtyable.class
+SHA1-Digest: J5FJOv1r9RV6aEKdKOYnMfzU6uM=
+
+Name: org/eclipse/e4/ui/internal/workbench/ActiveChildLookupFunction.c
+ lass
+SHA1-Digest: ynFM398EUr648OWhtJhmduwg8Ms=
+
+Name: org/eclipse/e4/ui/internal/workbench/SelectionAggregator$7.class
+SHA1-Digest: aWKiYLi6Es8Jkns8+z14jnbIM1o=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$Context.class
+SHA1-Digest: bJW/KFxX8P8f9smgijL7ey2hdc8=
+
+Name: org/eclipse/e4/ui/internal/workbench/PartServiceImpl$3.class
+SHA1-Digest: hJXNz01zaDbvw/n6J9lMYPeJBv0=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$KeyBinding.class
+SHA1-Digest: HO4liQBzBEwKceeZa/nbpHU4cdQ=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$GenericTrimContainer.class
+SHA1-Digest: BSoQ/cYhicIvwFJKmXRqjvFGiHE=
+
+Name: org/eclipse/e4/ui/internal/workbench/SelectionAggregator$7$2.cla
+ ss
+SHA1-Digest: iMqAMdYWPLQ8xO53q+/t+e4RAw4=
+
+Name: org/eclipse/e4/ui/internal/workbench/SelectionAggregator$8$2.cla
+ ss
+SHA1-Digest: UbidfLBltoZJnV/JxPQLoEOHics=
+
+Name: org/eclipse/e4/ui/internal/workbench/PlaceholderResolver.class
+SHA1-Digest: buD+byyifN0pM34A2a5iCejyM1I=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$StringToStringMap.class
+SHA1-Digest: 8ogG3dQ+TliLGPqnaYqaNOiZ5B0=
+
+Name: org/eclipse/e4/ui/workbench/lifecycle/PostContextCreate.class
+SHA1-Digest: ongIuAILoWih+a9Hzx2i4c5YPA0=
+
+Name: org/eclipse/e4/ui/workbench/UIEvents$MenuContributions.class
+SHA1-Digest: RHlTqDFc+Z1saH7QRieB/c6xyxg=
+
+Name: org/eclipse/e4/ui/internal/workbench/ModelAssembler.class
+SHA1-Digest: jAAhP9eavI3Da3ozJKvQ0xGZAbk=
+
+Name: org/eclipse/e4/ui/internal/workbench/Activator$1.class
+SHA1-Digest: /KX9ufV8HFCg2oDgZFjSMXJs3gU=
+
+Name: org/eclipse/e4/ui/internal/workbench/Parameter.class
+SHA1-Digest: ZGQkfFQp17Ea4JT63nA9JaklBTA=
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_urkLoNSzEeKy1bijg5nsaw" elementId="org.eclipse.e4.ide.application" bindingContexts="_urkLodSzEeKy1bijg5nsaw">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_urkyu9SzEeKy1bijg5nsaw" label="com.steelejr.xdev.app" width="500" height="400">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_urkyw9SzEeKy1bijg5nsaw">
+      <children xsi:type="advanced:Perspective" xmi:id="_urkyxNSzEeKy1bijg5nsaw">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_urkyxdSzEeKy1bijg5nsaw">
+          <children xsi:type="basic:PartStack" xmi:id="_urkyxtSzEeKy1bijg5nsaw"/>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_urkyvNSzEeKy1bijg5nsaw" elementId="menu:org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_urkyvdSzEeKy1bijg5nsaw" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_urkyvtSzEeKy1bijg5nsaw" label="Open" iconURI="platform:/plugin/com.steelejr.xdev.app/icons/sample.gif" command="_urkystSzEeKy1bijg5nsaw"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_urkyv9SzEeKy1bijg5nsaw" label="Save" iconURI="platform:/plugin/com.steelejr.xdev.app/icons/save_edit.gif" command="_urkytdSzEeKy1bijg5nsaw"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_urkywNSzEeKy1bijg5nsaw" label="Quit" command="_urkLqtSzEeKy1bijg5nsaw"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_urkywdSzEeKy1bijg5nsaw" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_urkywtSzEeKy1bijg5nsaw" label="About" command="_urkyuNSzEeKy1bijg5nsaw"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_urkyx9SzEeKy1bijg5nsaw">
+      <children xsi:type="menu:ToolBar" xmi:id="_urlZwNSzEeKy1bijg5nsaw" elementId="toolbar:org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_urlZwdSzEeKy1bijg5nsaw" iconURI="platform:/plugin/com.steelejr.xdev.app/icons/sample.gif" command="_urkystSzEeKy1bijg5nsaw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_urlZwtSzEeKy1bijg5nsaw" iconURI="platform:/plugin/com.steelejr.xdev.app/icons/save_edit.gif" command="_urkytdSzEeKy1bijg5nsaw"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_urkLq9SzEeKy1bijg5nsaw" contributionURI="bundleclass://com.steelejr.xdev.app/com.steelejr.xdev.app.handlers.QuitHandler" command="_urkLqtSzEeKy1bijg5nsaw"/>
+  <handlers xmi:id="_urkys9SzEeKy1bijg5nsaw" contributionURI="bundleclass://com.steelejr.xdev.app/com.steelejr.xdev.app.handlers.OpenHandler" command="_urkystSzEeKy1bijg5nsaw"/>
+  <handlers xmi:id="_urkyttSzEeKy1bijg5nsaw" contributionURI="bundleclass://com.steelejr.xdev.app/com.steelejr.xdev.app.handlers.SaveHandler" command="_urkytdSzEeKy1bijg5nsaw"/>
+  <handlers xmi:id="_urkyudSzEeKy1bijg5nsaw" contributionURI="bundleclass://com.steelejr.xdev.app/com.steelejr.xdev.app.handlers.AboutHandler" command="_urkyuNSzEeKy1bijg5nsaw"/>
+  <bindingTables xmi:id="_urkysNSzEeKy1bijg5nsaw" bindingContext="_urkLodSzEeKy1bijg5nsaw">
+    <bindings xmi:id="_urkysdSzEeKy1bijg5nsaw" keySequence="M1+Q" command="_urkLqtSzEeKy1bijg5nsaw"/>
+    <bindings xmi:id="_urkytNSzEeKy1bijg5nsaw" keySequence="M1+O" command="_urkystSzEeKy1bijg5nsaw"/>
+    <bindings xmi:id="_urkyt9SzEeKy1bijg5nsaw" keySequence="M1+S" command="_urkytdSzEeKy1bijg5nsaw"/>
+    <bindings xmi:id="_urkyutSzEeKy1bijg5nsaw" keySequence="M1+A" command="_urkyuNSzEeKy1bijg5nsaw"/>
+  </bindingTables>
+  <rootContext xmi:id="_urkLodSzEeKy1bijg5nsaw" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_urkLotSzEeKy1bijg5nsaw" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_urkLo9SzEeKy1bijg5nsaw" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_urkLqtSzEeKy1bijg5nsaw" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_urkystSzEeKy1bijg5nsaw" elementId="com.steelejr.xdev.app.open" commandName="openCommand"/>
+  <commands xmi:id="_urkytdSzEeKy1bijg5nsaw" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_urkyuNSzEeKy1bijg5nsaw" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <addons xmi:id="_urkLpNSzEeKy1bijg5nsaw" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_urkLpdSzEeKy1bijg5nsaw" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_urkLptSzEeKy1bijg5nsaw" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_urkLp9SzEeKy1bijg5nsaw" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_urkLqNSzEeKy1bijg5nsaw" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_urkLqdSzEeKy1bijg5nsaw" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>

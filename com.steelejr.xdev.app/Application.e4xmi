@@ -8,6 +8,7 @@
         </children>
       </children>
     </children>
+    <children xsi:type="basic:Part" xmi:id="_CYANgNUWEeKf6dLTgrf3KA" elementId="com.steelejr.xdev.app.part.0" contributionURI="bundleclass://com.steelejr.xdev.app/com.steelejr.xdev.app.handlers.TestView" closeable="true"/>
     <mainMenu xmi:id="_urkyvNSzEeKy1bijg5nsaw" elementId="menu:org.eclipse.ui.main.menu">
       <children xsi:type="menu:Menu" xmi:id="_urkyvdSzEeKy1bijg5nsaw" label="File">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_urkyvtSzEeKy1bijg5nsaw" label="Open" iconURI="platform:/plugin/com.steelejr.xdev.app/icons/sample.gif" command="_urkystSzEeKy1bijg5nsaw"/>

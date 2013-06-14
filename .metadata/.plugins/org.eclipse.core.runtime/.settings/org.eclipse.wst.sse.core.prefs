@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-task-tag-projects-already-scanned=com.steelejr.xdev.app
+task-tag-projects-already-scanned=com.steelejr.xdev.app,com.steelejr.xdev.feature,com.steelejr.xdev.product,org.eclipse.e4.ui.workbench,org.eclipse.e4.ui.workbench.renderers.swt

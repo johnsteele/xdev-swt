@@ -1,0 +1,21 @@
+package com.steelejr.xdev.app.handlers;
+
+import javax.annotation.PostConstruct;
+
+import org.eclipse.e4.ui.workbench.swt.factories.IRendererFactory;
+import org.eclipse.jface.layout.GridDataFactory;
+import org.eclipse.jface.layout.GridLayoutFactory;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Composite;
+
+public class TestView {
+	@PostConstruct
+	public void createControls (Composite parent) {
+		Composite comp = new Composite (parent, SWT.NONE);
+		GridLayoutFactory.fillDefaults().applyTo(comp);
+		GridDataFactory.fillDefaults().applyTo(comp);
+		Button b = new Button(comp, SWT.NONE);
+		b.setText("Test");
+	}
+}

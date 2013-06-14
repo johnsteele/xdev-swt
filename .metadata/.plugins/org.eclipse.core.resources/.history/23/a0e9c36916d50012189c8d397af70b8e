@@ -1,0 +1,13 @@
+package com.steelejr.xdev.app.handlers;
+
+import javax.annotation.PostConstruct;
+
+import org.eclipse.swt.widgets.Composite;
+
+public class TestView {
+
+	@PostConstruct
+	public void createControls (Composite parent) {
+		
+	}
+}
