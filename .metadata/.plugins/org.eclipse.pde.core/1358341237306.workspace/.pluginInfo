@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map>
-	<bundle bundleID="655" class="org.eclipse.e4.ui.internal.workbench.swt.WorkbenchSWTActivator" localization="plugin" name="%pluginName" project="org.eclipse.e4.ui.workbench.swt" provider="%providerName"/>
-	<bundle bundleID="654" class="org.eclipse.e4.ui.internal.workbench.Activator" localization="plugin" name="%pluginName" project="org.eclipse.e4.ui.workbench" provider="%providerName"/>
-	<bundle bundleID="652" localization="OSGI-INF/l10n/bundle" name="App" project="com.steelejr.xdev.app" provider="STEELEJR"/>
-	<bundle bundleID="653" class="org.eclipse.e4.ui.internal.workbench.renderers.swt.SWTRenderersActivator" localization="plugin" name="%pluginName" project="org.eclipse.e4.ui.workbench.renderers.swt" provider="%providerName"/>
-</map>
