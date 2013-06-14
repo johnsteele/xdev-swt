@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.e4.ui.workbench.swt.E4Application"
+            name="xdev">
+         <property
+               name="appName"
+               value="xdev">
+         </property>
+         <property
+               name="applicationXMI"
+               value="com.steelejr.xdev.app/Application.e4xmi">
+         </property>
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/com.steelejr.xdev.app/css/default.css">
+         </property>
+      </product>
+   </extension>
+
+</plugin>
